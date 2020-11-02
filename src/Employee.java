@@ -1,86 +1,79 @@
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.ParseException;
+
 public class Employee {
-		private String name;
+		private String firstName, lastName;
 		private int age;
+		private int birthYear;
 		private int salary;
-		private int hours;
-		public static int count;
 		
-		static {
-			System.out.println("Static Block");
-			count = 0;
-		}
-		public Employee(String name, int age, int salary, int hours) {
-			this.name = name;
-			this.age = age;
-			this.salary = salary;
-			this.hours = hours;
-			count++;
-		}
-
-
 		public Employee() {
-			name = "";
-			age =0;
-			salary =0;
-			hours =0;
-			count++;
+			firstName = "";
+			lastName = "";
+			birthYear = 0;
+			salary = 0;
+			age = 0;
 		}
-
-
-		public String getName() {
-			return name;
+		public Employee(String firstName, String lastName, int age, int birthYear, int salary) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.age = age;
+			this.birthYear = birthYear;
+			this.salary = salary;
 		}
-
-
-		public void setName(String name) {
-			this.name = name;
+		public String getFirstName() {
+			return firstName;
 		}
-
-
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
+		public String getLastName() {
+			return lastName;
+		}
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
 		public int getAge() {
 			return age;
 		}
-
-
 		public void setAge(int age) {
 			this.age = age;
 		}
-
-
+		public int getBirthYear() {
+			return birthYear;
+		}
+		public void setBirthYear(int birthYear) {
+			this.birthYear = birthYear;
+		}
 		public int getSalary() {
 			return salary;
 		}
-
-
+		
 		public void setSalary(int salary) {
 			this.salary = salary;
+			
 		}
-
-
-		public int getHours() {
-			return hours;
+		public void output() {
+				
+				System.out.println("employee: "+ this.toString());
 		}
-
-
-		public void setHours(int hours) {
-			this.hours = hours;
+			
+			public void changeName(String fn, String ln) {
+				
+				if (fn != null && fn != "") {
+					firstName = fn;
+				}
+				if (ln != null && ln != "") {
+					lastName = ln;
 		}
-
-
-		public static int getCount() {
-			return count;
-		}
-
-
-		public static void setCount(int count) {
-			Employee.count = count;
-		}
-		}
-
+				
+			}
+}
+			
 		
-		
-		
-		
-
+	
+				
 		
